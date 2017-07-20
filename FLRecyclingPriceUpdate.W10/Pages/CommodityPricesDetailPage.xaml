@@ -64,7 +64,7 @@
     <Grid Background="{StaticResource AppBackground}">
         <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}" />
 		<UI:AdControl ApplicationId="9n3jjkmrz4r9"
-        AdUnitId="11689937"
+        AdUnitId="11689977"
         HorizontalAlignment="Center"
         Height="75"
         VerticalAlignment="Bottom"

@@ -18,7 +18,6 @@ namespace FLRecyclingPriceUpdate.Sections
     {
 		private RestApiDataProvider _dataProvider;
 
-
 		public CommodityPricesSection()
 		{	
 			_dataProvider = new RestApiDataProvider();
@@ -57,6 +56,8 @@ namespace FLRecyclingPriceUpdate.Sections
         {
             get 
             {
+                var userCurrency = Windows.System.UserProfile.GlobalizationPreferences.Currencies[0];
+                var userCurrencyFormat = new Windows.Globalization.NumberFormatting.CurrencyFormatter(userCurrency);
                 return new ListPageConfig<CommodityPricesSchema>
                 {
                     Title = "Commodity Prices",
@@ -65,10 +66,12 @@ namespace FLRecyclingPriceUpdate.Sections
 
                     LayoutBindings = (viewModel, item) =>
                     {
-						viewModel.Header = item.header.ToSafeString();
+                        var price = userCurrencyFormat.Format(double.Parse(item.commodityPrice));
+                        viewModel.Header = item.header.ToSafeString();
                         viewModel.Title = item.commodityName.ToSafeString();
-                        viewModel.SubTitle = item.commodityPrice.ToSafeString();
-                        viewModel.Description = item.commodityPrice.ToSafeString();
+                        //viewModel.Title = price + " Per Pound";
+                        viewModel.SubTitle = price + " Per Pound";
+                        viewModel.Description = "Testing description";
                         viewModel.ImageUrl = ItemViewModel.LoadSafeUrl(item.commodityImageUrl.ToSafeString());
 						viewModel.Footer = item.commodityDescription.ToSafeString();
 
@@ -89,11 +92,15 @@ namespace FLRecyclingPriceUpdate.Sections
         {
             get
             {
+                var userCurrency = Windows.System.UserProfile.GlobalizationPreferences.Currencies[0];
+                var userCurrencyFormat = new Windows.Globalization.NumberFormatting.CurrencyFormatter(userCurrency);
                 var bindings = new List<Action<ItemViewModel, CommodityPricesSchema>>();
                 bindings.Add((viewModel, item) =>
                 {
+                    var price = userCurrencyFormat.Format(double.Parse(item.commodityPrice));
                     viewModel.PageTitle = item.commodityName.ToSafeString();
-                    viewModel.Title = item.commodityPrice.ToSafeString();
+                    //viewModel.Title = String.Format("{0:#$.0}", item.commodityPrice.ToSafeString());
+                    viewModel.Title = price + " Per Pound";
                     viewModel.Description = item.commodityDescription.ToSafeString();
                     viewModel.ImageUrl = ItemViewModel.LoadSafeUrl(item.commodityImageUrl.ToSafeString());
                     viewModel.Content = null;					

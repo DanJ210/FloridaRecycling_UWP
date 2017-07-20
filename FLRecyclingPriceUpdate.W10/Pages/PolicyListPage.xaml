@@ -52,8 +52,8 @@
             Grid.Row="1"
             HtmlContent="{x:Bind HtmlContent, Mode=OneWay}">
         </list_layouts:HtmlSection>
-		<UI:AdControl ApplicationId="11689937"
-              AdUnitId="9n3jjkmrz4r9"
+		<UI:AdControl ApplicationId="9n3jjkmrz4r9"
+              AdUnitId="11689979"
               HorizontalAlignment="Center"
               Height="75"
               VerticalAlignment="Bottom"

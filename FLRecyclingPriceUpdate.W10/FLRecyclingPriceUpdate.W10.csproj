@@ -21,6 +21,11 @@
     <RestorePackages>true</RestorePackages>
     <UapDefaultAssetScale>200</UapDefaultAssetScale>
     <UseDotNetNativeSharedAssemblyFrameworkPackage>True</UseDotNetNativeSharedAssemblyFrameworkPackage>
+    <PackageCertificateThumbprint>FA9C8CA5250D662A8E0EA3E377DFE11D2B8AE5E1</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>FLRecyclingPriceUpdate.W10_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -359,6 +364,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="FLRecyclingPriceUpdate.W10_StoreKey.pfx" />
     <None Include="project.json" />
     <None Include="Service References\Application Insights\ConnectedService.json" />
   </ItemGroup>
@@ -435,6 +441,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\RelatedContentVBP.json" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\ApplicationLogo.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

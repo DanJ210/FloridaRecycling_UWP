@@ -1,42 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-			<Identity Name="44530DanielJackson.FloridaRecyclingPriceChecker" Publisher="CN=7B129E44-F48E-40E1-985D-AFAE96C1ADA0" Version="1.0.8.0" />
-	    <mp:PhoneIdentity PhoneProductId="784b0008-b944-4869-9b45-e2fe5f6655eb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-    <Properties>
-        <DisplayName>Florida Recycling Price Checker</DisplayName>
-        <PublisherDisplayName>Daniel Jackson</PublisherDisplayName>
-        <Logo>Assets\StoreLogo.png</Logo>
-    </Properties>
-    <Dependencies>
-        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
-    </Dependencies>
-    <Resources>
-        <Resource Language="x-generate"/>
-    </Resources>
-    <Applications>
-        <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FLRecyclingPriceUpdate.App">
-            <uap:VisualElements 
-			  DisplayName="FLRecycling Price Update"
-              Square150x150Logo="Assets\Square150x150Logo.png"
-              Square44x44Logo="Assets\Square44x44Logo.png"
-              Description="Showing latest prices at your local Florida Recycling center located at 420 S Florida Ave., Deland, FL 32720 - (386) 490-5527. App published by Daniel Jackson. daniel.jackson210@outlook.com."
-              BackgroundColor="transparent">
-                <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#6a00ff"/>
-                <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.jpg" Square71x71Logo="Assets\Square71x71Logo.png">
-                    <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile10?config=LwYAAB~LCAAAAAAABAClVE1z2jAQ/SuMTu2MC6ZNDvUtkH4wLYQEEg6dHBSzGA2y5JHkJIbxf~9KlsEU4slMhwu7~/bt0354R671vMiARP2LAP8PpVixhEQ7cpuDKkhE1sZkUa~34lKxJVUQFzFnIknBUE4z1qXbXMELPGlmQHcFmB56ey5MAnInpZlSsyaRyDlHG3QmhYaRgXS0RPpYpqlcMlOgdQiT6M~ODJhYYqUJTaEJdPYBejZcBm~mTxWL2/KreAvBKKUJ3CvewrGHtNBcg44VywyTooWpiTolWwNdgjpN9/7yMSBTmjBBbf6UKowa9ON0PRBTq~mHDgkztgUb3mMPODsx/UB5btFlQKpNyZXjnuQpYN9s6kgwwyj3yP6/yLncgLC4WrJz1GVKhN8o1H6UY~F~SX14UJzZiJlU5gBpPLdavWOv19cIDYrzKQ1/IwmF/nRd1m5Xf4FVdK9BfbpKQBiU48FkLLeMc9q77IadDwucn3zRncm80w~74Uc3oyHFY5GJvYdwbz0gtXv7wTXMtZFpfaJexRzSjFPjxjZnvF6BKcAGRQwUdQtDoi943kwjtPCI79VFd~7qk0b4DyXzrHrRLH9qWAtgydp2NwxtyVczMzTeOGJ0fOOQ4qMrqI1aMajT2E6cDmqhaEaiFeUaAjJm4jcToOuej~mrt3GSKMJw2GNnprAWfqmuOEtE6ujtMrqDq1vyfglG5a0KLg8KKqgX0H~fgIrOh7CjKn7zO5LKZxhThbdalxoqmbnm3jyDwqlVN8ppDFXVz~V/F/JdPa108fWoVL8sH92v/AutJaR6LwYAAA=="/>
-                    <uap:ShowNameOnTiles>
-                        <uap:ShowOn Tile="square150x150Logo"/>
-						<uap:ShowOn Tile="square310x310Logo" />
-                    </uap:ShowNameOnTiles>
-                </uap:DefaultTile>
-            </uap:VisualElements>
-        </Application>
-    </Applications>
-    <Capabilities>
-        <Capability Name="internetClient" />
-    </Capabilities>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="44530DanielJackson.FloridaRecyclingPriceChecker" Publisher="CN=7B129E44-F48E-40E1-985D-AFAE96C1ADA0" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="784b0008-b944-4869-9b45-e2fe5f6655eb" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Florida Recycling Price Checker</DisplayName>
+    <PublisherDisplayName>Daniel Jackson</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FLRecyclingPriceUpdate.App">
+      <uap:VisualElements DisplayName="FLRecycling Price Update" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Showing latest prices at your local Florida Recycling center located at 420 S Florida Ave., Deland, FL 32720 - (386) 490-5527. App published by Daniel Jackson. daniel.jackson210@outlook.com." BackgroundColor="transparent">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#6a00ff" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.jpg" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile10?config=LwYAAB~LCAAAAAAABAClVE1z2jAQ/SuMTu2MC6ZNDvUtkH4wLYQEEg6dHBSzGA2y5JHkJIbxf~9KlsEU4slMhwu7~/bt0354R671vMiARP2LAP8PpVixhEQ7cpuDKkhE1sZkUa~34lKxJVUQFzFnIknBUE4z1qXbXMELPGlmQHcFmB56ey5MAnInpZlSsyaRyDlHG3QmhYaRgXS0RPpYpqlcMlOgdQiT6M~ODJhYYqUJTaEJdPYBejZcBm~mTxWL2/KreAvBKKUJ3CvewrGHtNBcg44VywyTooWpiTolWwNdgjpN9/7yMSBTmjBBbf6UKowa9ON0PRBTq~mHDgkztgUb3mMPODsx/UB5btFlQKpNyZXjnuQpYN9s6kgwwyj3yP6/yLncgLC4WrJz1GVKhN8o1H6UY~F~SX14UJzZiJlU5gBpPLdavWOv19cIDYrzKQ1/IwmF/nRd1m5Xf4FVdK9BfbpKQBiU48FkLLeMc9q77IadDwucn3zRncm80w~74Uc3oyHFY5GJvYdwbz0gtXv7wTXMtZFpfaJexRzSjFPjxjZnvF6BKcAGRQwUdQtDoi943kwjtPCI79VFd~7qk0b4DyXzrHrRLH9qWAtgydp2NwxtyVczMzTeOGJ0fOOQ4qMrqI1aMajT2E6cDmqhaEaiFeUaAjJm4jcToOuej~mrt3GSKMJw2GNnprAWfqmuOEtE6ujtMrqDq1vyfglG5a0KLg8KKqgX0H~fgIrOh7CjKn7zO5LKZxhThbdalxoqmbnm3jyDwqlVN8ppDFXVz~V/F/JdPa108fWoVL8sH92v/AutJaR6LwYAAA==" />
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
 </Package>

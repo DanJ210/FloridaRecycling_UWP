@@ -75,7 +75,7 @@
 			LastUpdateDateTime="{x:Bind ViewModel.LastUpdated, Mode=OneWay}"/>
 
 		<UI:AdControl ApplicationId="9n3jjkmrz4r9"
-              AdUnitId="11689937"
+              AdUnitId="11689975"
               HorizontalAlignment="Center"
               Height="75"
               VerticalAlignment="Bottom"
