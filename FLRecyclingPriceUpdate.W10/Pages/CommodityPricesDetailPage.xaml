@@ -66,8 +66,8 @@
 		<UI:AdControl ApplicationId="9n3jjkmrz4r9"
         AdUnitId="11689977"
         HorizontalAlignment="Center"
-        Height="50"
+        Height="80"
         VerticalAlignment="Bottom"
-        Width="300"/>
+        Width="480"/>
     </Grid>
 </Page>
